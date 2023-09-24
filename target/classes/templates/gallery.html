@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+</head>
+<style>
+   *{
+      margin: 0;
+      padding: 0;
+   }
+     .imgsize{
+        width: 500px;
+        height: 250px;
+     }
+    #buttons{
+         display: flex;
+         justify-content: space-around ;
+         margin-top: 4px;
+    }
+    h1{
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: black;
+      color: white;
+      margin-bottom: 10px;
+    }
+#space{
+   height: 50px;
+   margin-bottom: 10px;
+   border: 2px solid black;
+}
+  .sty{
+   padding: 10px 45px;
+   background-color: white;
+   
+            border: 3px solid transparent;
+            border-image: linear-gradient(to right, red, orange);
+            border-image-slice: 1;
+           
+   font-size: 15px;
+   text-transform: uppercase  ;
+   cursor: pointer;
+
+
+  }
+  
+  .sty:hover{
+   transition: 2s;
+   background: linear-gradient(red,orange); 
+   box-shadow: inset 200px  5px black; 
+   color: white;
+  }  
+     
+</style>
+<body>
+  <a  style="text-decoration: none;color: black; font-size: 30px;" th:href="@{/index}">HOME</a> 
+   <h1>gallery</h1>
+   <div id="space">
+   <div id="buttons">
+   <button class="sty"    id="one">Devotional</button>
+   <button   class="sty"   id="two">Cyper</button>
+   <button  class="sty"    id="three">Food</button>
+   <button  class="sty"     id="four">Movies</button>
+
+   <button   class="sty"  id="all">All</button>
+</div>
+</div>
+
+
+   <div id="item1" style="width: 1600px;">
+      <span th:each="devotional: ${listdevotional}">
+      <span><img class="imgsize" th:src="${devotional.images}" alt="Image"></span>
+      </span>
+      </div>
+
+
+
+ <div id="item2" style="width: 1600px;">
+   <span style="max-width: 1800px;"           th:each="img: ${listgallery}">
+       <span style="max-width: 1800px;"    ><img class="imgsize" th:src="${img.images}" alt="Image"></span>
+       </span>
+</div>
+
+
+<div id="item3"  style="width: 1600px;"s>
+   <span th:each="food: ${listfoods}">
+     <span><img class="imgsize" th:src="${food.images}" alt="Image"></span>
+     </span>
+   </div>
+
+   <div id="item4" style="width: 1600px;" >
+      <span th:each="movie: ${listmovies}">
+      <span><img class="imgsize" th:src="${movie.images}" alt="Image"></span>
+      </span>
+      </div>
+      
+ <script>
+   
+
+
+     
+   // Get references to the three items
+   const item1 = document.getElementById('item1');
+const item2 = document.getElementById('item2');
+const item3 = document.getElementById('item3');
+const item4 = document.getElementById('item4');
+
+
+const but1=document.getElementById("one")
+const but2=document.getElementById("two")
+const but3=document.getElementById("three")
+const but4=document.getElementById("four")
+const but5=document.getElementById("all")
+
+
+
+
+
+
+
+but1.addEventListener('click', () => {
+  item1.style.display='block'
+  item2.style.display = 'none';
+  item3.style.display = 'none';
+  item4.style.display = 'none';
+});
+
+
+but2.addEventListener('click', () => {
+
+  item1.style.display = 'none';
+  item2.style.display = 'block'
+  item3.style.display = 'none';
+  item4.style.display = 'none';
+});
+
+
+but3.addEventListener('click', () => {
+
+  item1.style.display = 'none';
+  item2.style.display = 'none';
+  item3.style.display="block" ;
+  item4.style.display = 'none';
+});
+
+
+but4.addEventListener('click', () => {
+
+item1.style.display = 'none';
+item2.style.display = 'none';
+item3.style.display="none" ;
+item4.style.display = 'block';
+});
+
+
+but5.addEventListener('click', () => {
+
+item1.style.display = 'block';
+item2.style.display = 'block';
+item3.style.display="block" ;
+item4.style.display = 'block';
+});
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+
+
+
+       
+
+</body>
+</html>

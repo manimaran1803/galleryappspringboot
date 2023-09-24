@@ -1,0 +1,172 @@
+
+instructions:-
+
+   step 1:-open springboot application in any IDE ex:eclipese,STS,vsCode
+
+   step 2:-in a  application properties;-
+             
+             i) spring.datasource.url=your database
+              
+             II) spring.datasource.username=root
+
+             III) spring.datasource.password=yourpassword
+             IV) spring.hibernate.ddl-auto:update
+              
+                 server.port=your wish
+               
+   
+   step 3:-when application started running your entity class inthe model layer started to run
+          create a table in mysql by extending jpareoisitory 
+
+   step 4:- if you want to see gallery images(not mandatory)
+            insert the below images into sql make sure you have mysql workbench.
+
+   step 5:- just type localhost:8080 in chrome browser
+
+   step 6:-here you are we you are in home page,you just download my cv ,you want to see my
+           other projects go and click git button it's redirected my github page 
+    
+   step 7:- gallery page is authenticated by spring security,only authorized users only 
+            see that,so you need to register your name,email,password.
+
+   step 8:- then after register complete go and put you login credentials and see the 
+            gallery page(note:gallery images or links imagesource make sure your connection); 
+
+
+ final:-suppose it's did not work correctly,i added a video file how the page works 
+        don't forget to see it 
+
+
+
+
+                                  images for gallery items 
+
+put in mysqlworkbench yourdatabase:-
+
+//devotional images
+
+INSERT INTO devotional VALUES (1,'https://c0.wallpaperflare.com/preview/507/753/91/lord-ganesha-ganapati-statue-idols.jpg','vinyak');
+INSERT INTO devotional VALUES (2,'https://c1.wallpaperflare.com/preview/365/436/12/deity-divine-worship-religion.jpg','kali');
+INSERT INTO devotional VALUES (3,'https://c1.wallpaperflare.com/preview/765/372/936/india-rishikesh-ganges-shiva.jpg','shiva');
+INSERT INTO devotional VALUES (4,'https://c4.wallpaperflare.com/wallpaper/406/323/731/religious-lord-muruga-batu-caves-hinduism-wallpaper-preview.jpg','muruga');
+INSERT INTO devotional VALUES (5,'https://c4.wallpaperflare.com/wallpaper/274/384/23/god-of-war-god-of-war-ascension-god-mythology-wallpaper-preview.jpg','zeus');
+INSERT INTO devotional VALUES (6,'https://c4.wallpaperflare.com/wallpaper/346/798/342/philosophy-artwork-painting-jacques-louis-david-wallpaper-preview.jpg','orders');
+INSERT INTO devotional VALUES (7,'https://c4.wallpaperflare.com/wallpaper/384/613/223/athens-school-steps-raphael-wallpaper-preview.jpg','gospel');
+INSERT INTO devotional VALUES (8,'https://c4.wallpaperflare.com/wallpaper/213/252/31/aurora-cephalus-greek-mythology-classic-art-painting-hd-wallpaper-preview.jpg','paint');
+INSERT INTO devotional  VALUES (9,'https://c4.wallpaperflare.com/wallpaper/473/352/906/flapping-approach-davinci-workshop-wallpaper-preview.jpg','davinci');
+
+
+
+
+//food images
+
+
+INSERT INTO food VALUES (1,'https://c4.wallpaperflare.com/wallpaper/374/404/846/brown-bird-perching-during-daytime-wren-wren-wallpaper-preview.jpg','burger');
+INSERT INTO food VALUES (2,'https://c4.wallpaperflare.com/wallpaper/543/4/31/grilled-chicken-crispy-fried-wallpaper-preview.jpg','chicken');
+INSERT INTO food VALUES (3,'https://c4.wallpaperflare.com/wallpaper/848/809/121/red-and-yellow-boat-wallpaper-preview.jpg','tikka');
+INSERT INTO food VALUES (4,'https://c4.wallpaperflare.com/wallpaper/768/217/159/lemon-food-chicken-baked-wallpaper-preview.jpg','legpiece');
+INSERT INTO food VALUES (5,'https://c1.wallpaperflare.com/preview/656/38/328/salmon-fish-grilled-fish-grill.jpg','fish');
+INSERT INTO food VALUES (6,'https://c4.wallpaperflare.com/wallpaper/663/296/974/meat-food-meal-dinner-wallpaper-preview.jpg','mutton');
+INSERT INTO food VALUES (7,'https://c4.wallpaperflare.com/wallpaper/124/52/871/kfc-wallpaper-preview.jpg','kfc');
+INSERT INTO food VALUES (8,'https://c1.wallpaperflare.com/preview/318/155/763/yakisoba-food-dinner-meal.jpg','noodle');
+INSERT INTO food VALUES (9,'https://c4.wallpaperflare.com/wallpaper/544/347/829/food-noodles-spaghetti-wallpaper-preview.jpg','pasta');
+
+
+
+//nyon images 
+
+INSERT INTO gallery VALUES (1,'nature','A dune is a mound of sand formed by the wind, usually along the beach or in a desert. Dunes form when wind blows sand into a sheltered area behind an obstacle. Dunes grow as grains of','https://wallpaperaccess.com/full/1573726.jpg','Dune');
+INSERT INTO gallery VALUES (2,'nature','A dune is a mound of sand formed by the wind, usually along the beach or in a desert. Dunes form when wind blows sand into a sheltered area behind an obstacle. Dunes grow as grains of','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/6a/e5/a7/thanjavur-brihadeeshwara.jpg?w=1200&h=-1&s=1','Dune');
+INSERT INTO gallery VALUES (3,NULL,NULL,'https://diplomatist.com/wp-content/uploads/2022/09/Brazil.jpg',NULL);
+INSERT INTO gallery VALUES (4,NULL,NULL,'https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm.jpg',NULL);
+INSERT INTO gallery VALUES (5,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (6,NULL,NULL,'https://www.crafttrip.in/image/cache/catalog/radha-krishna/radha-krishna-paintings-love-wall-canvas-home-vastu-800x534w.jpg',NULL);
+INSERT INTO gallery VALUES (7,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (8,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (9,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/246/739/689/digital-digital-art-artwork-illustration-abstract-hd-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (10,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/1020/1/213/world-of-warcraft-battle-for-azeroth-video-games-warcraft-alliance-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (11,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/295/163/719/anime-anime-boys-picture-in-picture-kimetsu-no-yaiba-kamado-tanjir%C5%8D-hd-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (12,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/291/819/697/illustration-city-anime-painting-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (13,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/708/846/337/anime-demon-slayer-kimetsu-no-yaiba-tanjirou-kamado-hd-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (14,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/384/350/430/digital-art-artwork-cyber-cyberpunk-neon-hd-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (15,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/133/969/139/artwork-nature-landscape-fantasy-art-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (16,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/297/288/1009/5bd320d590bcf-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (17,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/663/420/862/car-purple-retrowave-landscape-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (18,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/951/583/798/fantasy-art-warrior-dark-souls-iii-dark-souls-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (19,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/910/24/10/night-artwork-futuristic-city-cyberpunk-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (20,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/967/867/776/abstract-brain-science-artwork-wallpaper-thumb.jpg',NULL);
+INSERT INTO gallery VALUES (21,NULL,NULL,'https://c4.wallpaperflare.com/wallpaper/663/947/813/oldboy-japanese-digital-art-artwork-wallpaper-thumb.jpg',NULL);
+
+
+
+//movie
+
+
+
+
+
+
+INSERT INTO movie VALUES (1,'https://c4.wallpaperflare.com/wallpaper/221/189/102/batman-batman-begins-movies-the-dark-knight-wallpaper-preview.jpg','batman');
+INSERT INTO movie VALUES (2,'https://c4.wallpaperflare.com/wallpaper/579/921/292/amazing-spider-man-new-marvel-s-the-amazing-spider-man-movie-poster-wallpaper-preview.jpg','spiderman');
+INSERT INTO movie VALUES (3,'https://c4.wallpaperflare.com/wallpaper/749/65/222/cinema-girl-windows-golden-wallpaper-preview.jpg','beauty');
+INSERT INTO movie VALUES (4,'https://c4.wallpaperflare.com/wallpaper/999/51/612/art-artistic-artwork-fantasy-wallpaper-preview.jpg','lotr');
+INSERT INTO movie VALUES (5,'https://c4.wallpaperflare.com/wallpaper/221/116/854/joaquin-phoenix-joker-batman-fire-car-hd-wallpaper-preview.jpg','joker');
+INSERT INTO movie VALUES (6,'https://c4.wallpaperflare.com/wallpaper/766/754/564/wall-e-pixar-animation-studios-disney-movies-wallpaper-preview.jpg','walle');
+INSERT INTO movie VALUES (7,'https://c4.wallpaperflare.com/wallpaper/478/888/1024/keanu-reeves-john-wick-gun-movies-wallpaper-preview.jpg','johnwick');
+INSERT INTO movie VALUES (8,'https://c4.wallpaperflare.com/wallpaper/582/58/501/breaking-bad-walter-white-jesse-pinkman-wallpaper-preview.jpg','breakingbad');
+INSERT INTO movie VALUES (9,'https://c4.wallpaperflare.com/wallpaper/462/921/235/stranger-things-5k-wallpaper-preview.jpg','stranger');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

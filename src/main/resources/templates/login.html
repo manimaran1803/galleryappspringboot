@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        #ss{
+            background-color: white;
+            box-shadow: 2px 2px 20px black;
+            margin-top: 150px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>   <a id="second"      th:href="@{/register}">Register/</a></h1>
+
+
+ 
+
+    <div id="ss" class="container" style="max-width: 400px;">
+        <h1 style="text-align: center;">LOGIN FORM</h1>
+    <form th:action="@{/login}" method="post" >
+					
+      
+     
+        <label for ="username"> Username </label> 
+        <input type="text" class = "form-control"  name = "username" placeholder="enter username" />
+
+    
+
+        <label for="password">Password</label>
+         <input type="password"
+            name="password" class="form-control"
+            placeholder="enter Password" /><br>
+
+    
+                <input type="submit"   class="btn btn-primary"  >
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger">Invalid username or
+                        password.</div>
+                </div>
+            </div>
+</body>
+</html>
